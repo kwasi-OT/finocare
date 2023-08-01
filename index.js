@@ -1,5 +1,14 @@
 Bugfender.init({
     appKey: 'zYAkTJ7dVug4Zx4zvoS6sQuKC7oQv6Co',
+    apiURL: 'https://api.bugfender.com',
+    baseURL: 'https://dashboard.bugfender.com',
+    overrideConsoleMethods: true,
+    printToConsole: true,
+    registerErrorHandler: true,
+    logBrowserEvents: true,
+    logUIEvents: true,
+    version: 1.0,
+    build: 1,
 });
 
 function showUnitFields(unit) { // select unit field based on selected type
@@ -10,6 +19,10 @@ function showUnitFields(unit) { // select unit field based on selected type
         document.getElementById("metricFields").style.display = "block";
         document.getElementById("standardFields").style.display = "none";
     }
+    Bugfender.log(showUnitFields());
+    Bugfender.warn(showUnitFields());
+    Bugfender.error(showUnitFields());
+    Bugfender.fatal(showUnitFields());
 }
 
 // calculate the bmi upon click event
@@ -57,4 +70,10 @@ function calculateBMI() {
         document.getElementById('bmiResult').innerText = bmi;
         document.getElementById('healthTips').textContent = healthTips;
         document.getElementById('result').style.display = 'block';
+
+        Bugfender.log(calculateBMI());
+        Bugfender.warn(calculateBMI());
+        Bugfender.error(calculateBMI());
+        Bugfender.fatal(calculateBMI());
+        Bugfender.info(calculateBMI())
 }
