@@ -4,11 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinoCare: Your Health Your Life</title>
-    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header id="header">
+        <div class="headerInfo">
+            <h2 class="header">
+                Welcome to FinoCare, the #1 wellnessGPT <br> behavourial engagement and telewellness platform
+            </h2>
+            <p>
+                We believe that health care, begins with self care.<br> Find out how you can healthily today.<br>It all begins with a simple BMI test.
+            </p>
+            <a href="#bmi">Take a Free BMI Test Now!</a>
+        </div>
+        <div class="headerForm">
+            <img src="./assets/images/appimage.png" alt="app image">
+        </div>
+    </header>
+    <main>
+        <section id="bmi">
+            <h1>Take a Free BMI Test Now!</h1>
+            <div class="bmiInfo"></div>
+            <div class="bmiFormContainer">
+                <h2>BMI Calculator</h2>
+                <div>
+                    <input type="radio" name="unit" id="standard" value="standard" onclick="showUnitFields('standard')" checked>
+                    <label for="standard">Standard</label>
+                
+                    <input type="radio" name="unit" id="metric" value="metric" onclick="showUnitFields('metric')">
+                    <label for="metric">Metric</label>
+                </div>
+                
+                  <!-- Standard Unit Fields -->
+                  <div id="standardFields">
+                    <label for="feet">Height (feet):</label>
+                    <input type="number" id="feet" min="1" required>
+                    <label for="inches">Height (inches):</label>
+                    <input type="number" id="inches" min="0" max="11" required>
+                    <label for="weight">Weight (lbs):</label>
+                    <input type="number" id="weight" min="1" required>
+                  </div>
+                
+                  <!-- Metric Unit Fields -->
+                  <div id="metricFields" style="display:none;">
+                    <label for="centimeters">Height (cm):</label>
+                    <input type="number" id="centimeters" min="1" required>
+                    <label for="kilograms">Weight (kg):</label>
+                    <input type="number" id="kilograms" min="1" required>
+                  </div>
+                
+                  <button onclick="calculateBMI()">Calculate BMI</button>
+                
+                  <div id="result" style="display:none;">
+                    <h2>Result:</h2>
+                    <p>Your BMI: <span id="bmiResult"></span></p>
+                    <p>Suggested Health Tips: <span id="healthTips"></span></p>
+                  </div>
+            </div>
+        </section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </main>
     <footer></footer>
 </body>
 </html>
