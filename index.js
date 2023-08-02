@@ -1,3 +1,5 @@
+"use strict";
+
 Bugfender.init({
     appKey: 'zYAkTJ7dVug4Zx4zvoS6sQuKC7oQv6Co',
     apiURL: 'https://api.bugfender.com',
