@@ -5,8 +5,13 @@
 }
 
 #header {
-    width: 100% !important;
-    height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    height: fit-content;
     background-image: linear-gradient(to top right, #a3f7ff, #fff);
 }
 
