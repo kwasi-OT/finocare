@@ -2,16 +2,250 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 #header {
+    width: 100%;
+    height: fit-content;
+    background-image: linear-gradient(to bottom right, #fff, #a3f7ff);
+}
+
+.headerContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    padding: 2rem;
-    width: 100%;
+    padding-top: 1.5rem;
+    width: 95%;
+    margin: 0 auto;
     height: fit-content;
-    background-image: linear-gradient(to top right, #a3f7ff, #fff);
 }
 
+.headerTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 3.50rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.headerLogo {
+    width: 11.75rem;
+    height: 3.38rem;
+}
+
+.headerLogo img {
+    width: 100%;
+    height: 100%;
+}
+
+.headerTop a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #0080FF;
+}
+
+.headerTop a:hover {
+    color: #010C80;
+    text-decoration-line: underline;
+    text-decoration-color: #0080FF;
+    text-underline-offset: 1rem;
+}
+
+.headerMenu ul {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.headerMenu li:not(:last-child) {
+    margin-right: 2.5rem;
+}
+
+#overlay {
+    display: fixed;
+    width: 50%;
+    height: fit-content;
+    position: absolute;
+    top: 2rem;
+    left: 11rem;
+    right: auto;
+    text-align: center;
+    background-color: rgba(0, 50, 200, 0.7);
+}
+
+.overlayNav li {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.overlayNav li:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.overlayNav a {
+    color: #fff;
+    font-weight: 400;
+}
+
+.overlayClose {
+    position: absolute;
+    top: 0.5rem;
+    right: auto;
+    left: 9.8rem;
+    color: #fff;
+}
+
+
+.headerBottom {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.headerInfo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.headerInfo a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.heroButton {
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+    background-color: #0080FF;
+    width: 70%;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+
+}
+
+.heroButton:hover {
+    background-color: #010C80;
+    color: #fff;
+}
+
+.headerImage {
+    width: 100%;
+    height: auto;
+}
+
+.headerImage img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .headerContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding-top: 2rem;
+        width: 92%;
+        margin: 0 auto;
+        height: fit-content;
+    }
+
+    .headerTop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 3.50rem;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .headerMenu ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+
+    .headerBottom {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    .headerInfo {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .headerInfo a {
+        text-decoration: none;
+        line-height: 2.5rem;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .heroButton {
+        width: 50%;
+        padding: 1rem 0.7rem;
+        margin-top: 2rem;
+        background-color: #0080FF;
+        color: #fff;
+        border-radius: 0.5rem;
+    }
+
+    .headerLogo {
+        width: 13.95rem;
+        height: 3.38rem;
+    }
+    
+    .headerLogo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #mobileMenu, #overlay {
+        display: none;
+    }
+
+    .headerImage {
+        width: 50%;
+        height: auto;
+    }
+    
+    .headerImage img {
+        width: 100%;
+        height: 100%;
+    }
+}
