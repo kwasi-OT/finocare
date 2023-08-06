@@ -24,8 +24,8 @@
                         <li><a href="exercise.html">Exercises</a></li>
                     </ul>
                 </nav>
-                <div id="mobileMenu">
-                    <i data-feather="menu"></i>
+                <div id="mobileMenu" onclick="displayOverlay()">
+                    <i class="mobileMenuIcon" data-feather="menu"></i>
                 </div>
                 <div id="overlay">
                     <nav class="overlayNav">
@@ -34,8 +34,8 @@
                             <li><a href="bmi.html">BMI</a></li>
                             <li><a href="exercise.html">Exercises</a></li>
                         </ul>
-                        <div class="overlayClose">
-                            <i data-feather="x-square"></i>
+                        <div class="overlayClose" onclick="closeOverlay()">
+                            <i class="closeIcon" data-feather="x-square"></i>
                         </div>
                     </nav>
                 </div>
@@ -107,7 +107,7 @@
     </main>
     <footer></footer>
     <script defer src="https://js.bugfender.com/bugfender-v2.js"></script>
-    <script src="index.js"></script>
+    <script src="/index.js"></script>
     <script>
         feather.replace()
     </script>

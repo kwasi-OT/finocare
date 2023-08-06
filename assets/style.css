@@ -69,21 +69,38 @@
     margin-right: 2.5rem;
 }
 
+#mobileMenu {
+    display: block;
+    padding: 0.5rem;
+    cursor: pointer;
+    /* border-radius: 0.5rem;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.20), 0 10px 10px 0 rgba(0,0,0,0.10); */
+}
+
+.mobileMenuIcon {
+    color: #010C80;
+    width: 2rem;
+    height: 3rem;
+}
+
 #overlay {
-    display: fixed;
-    width: 50%;
+    display: none;
+    width:60%;
     height: fit-content;
-    position: absolute;
-    top: 2rem;
-    left: 11rem;
-    right: auto;
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
     text-align: center;
-    background-color: rgba(0, 50, 200, 0.7);
+    background-color: rgba(0, 50, 200, 0.8);
+}
+
+.overlayNav {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .overlayNav li {
     list-style: none;
-    font-size: 1.5rem;
 }
 
 .overlayNav li:not(:last-child) {
@@ -91,18 +108,23 @@
 }
 
 .overlayNav a {
+    font-size: 1.5rem;
     color: #fff;
     font-weight: 400;
 }
 
 .overlayClose {
     position: absolute;
-    top: 0.5rem;
-    right: auto;
-    left: 9.8rem;
+    top: 0.8rem;
+    right: 1rem;
     color: #fff;
 }
 
+.closeIcon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
 
 .headerBottom {
     width: 100%;

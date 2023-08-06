@@ -1,5 +1,5 @@
 "use strict";
-
+// initialize the bugfender sdk
 Bugfender.init({
     appKey: 'zYAkTJ7dVug4Zx4zvoS6sQuKC7oQv6Co',
     apiURL: 'https://api.bugfender.com',
@@ -12,6 +12,19 @@ Bugfender.init({
     version: 1.0,
     build: 1,
 });
+
+// mobile menu event handler
+
+function displayOverlay() {
+    document.getElementById('mobileMenu').style.display = 'none';
+    document.getElementById("overlay").style.display = "block";
+}
+
+// close the overlay
+function closeOverlay() {
+    document.getElementById('mobileMenu').style.display = 'block';
+    document.getElementById("overlay").style.display = "none";
+}
 
 function showUnitFields(unit) { // select unit field based on selected type
     if (unit === "standard") {
