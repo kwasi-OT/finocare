@@ -58,46 +58,58 @@
     </header>
     <main>
         <section id="bmi">
-            <h1>Take a Free BMI Test Now!</h1>
-            <div class="bmiInfo">
-                <p>
-                    Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.<br />Your weight is related to your health and our BMI calculator can help you track that.<br />While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.
-                </p>
-            </div>
-            <div class="bmiFormContainer">
-                <h2>BMI Calculator</h2>
-                <div>
-                    <input type="radio" name="unit" id="standard" value="standard" onclick="showUnitFields('standard')" checked>
-                    <label for="standard">Standard</label>
-                
-                    <input type="radio" name="unit" id="metric" value="metric" onclick="showUnitFields('metric')">
-                    <label for="metric">Metric</label>
+            <div id="bmiSectionContainer">
+                <div class="leftContainer">
+                    <div class="bmiInfo">
+                        <h2>Body Mass Index Calculator</h2>
+                        <p>
+                            Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women. Your weight is related to your health and our BMI calculator can help you track that. <br/>While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.
+                        </p>
+                    </div>
                 </div>
-                
-                  <!-- Standard Unit Fields -->
-                <div id="standardFields">
-                    <label for="feet">Height (feet):</label>
-                    <input type="number" id="feet" min="1" required>
-                    <label for="inches">Height (inches):</label>
-                    <input type="number" id="inches" min="0" max="11" required>
-                    <label for="weight">Weight (lbs):</label>
-                    <input type="number" id="weight" min="1" required>
-                </div>
-                
-                  <!-- Metric Unit Fields -->
-                <div id="metricFields" style="display:none;">
-                    <label for="centimeters">Height (cm):</label>
-                    <input type="number" id="centimeters" min="1" required>
-                    <label for="kilograms">Weight (kg):</label>
-                    <input type="number" id="kilograms" min="1" required>
-                </div>
-                
-                <button onclick="calculateBMI()">Calculate BMI</button>
-                
-                <div id="result" style="display:none;">
-                    <h2>Result:</h2>
-                    <p>Your BMI: <span id="bmiResult"></span></p>
-                    <p>Suggested Health Tips: <span id="healthTips"></span></p>
+                <div class="rightContainer"></div>
+                <div class="bmiFormContainer">
+                    <h2>Enter your details below</h2>
+                    <div>
+                        <input type="radio" name="unit" id="standard" value="standard" onclick="showUnitFields('standard')" checked>
+                        <label for="standard">Standard</label>
+                    
+                        <input type="radio" name="unit" id="metric" value="metric" onclick="showUnitFields('metric')">
+                        <label for="metric">Metric</label>
+                    </div>
+                    
+                      <!-- Standard Unit Fields -->
+                    <div id="standardFields">
+                        <label for="feet">Height (feet):</label>
+                        <input type="number" id="feet" min="1" required>
+                        <label for="inches">Height (inches):</label>
+                        <input type="number" id="inches" min="0" max="11" required>
+                        <label for="weight">Weight (lbs):</label>
+                        <input type="number" id="weight" min="1" required>
+                    </div>
+                    
+                      <!-- Metric Unit Fields -->
+                    <div id="metricFields" style="display:none;">
+                        <label for="centimeters">Height (cm):</label>
+                        <input type="number" id="centimeters" min="1" required>
+                        <label for="kilograms">Weight (kg):</label>
+                        <input type="number" id="kilograms" min="1" required>
+                    </div>
+                    
+                    <button onclick="calculateBMI()">Calculate BMI</button>
+
+                    <div class="bmiWelcome">
+                        <h2>Welcome!</h2>
+                        <p>
+                            Enter your height and width and press the button to see the results
+                        </p>
+                    </div>
+                    
+                    <div id="result" style="display:none;">
+                        <h2>Result:</h2>
+                        <p>Your BMI: <span id="bmiResult"></span></p>
+                        <p>Suggested Health Tips: <span id="healthTips"></span></p>
+                    </div>
                 </div>
             </div>
         </section>
