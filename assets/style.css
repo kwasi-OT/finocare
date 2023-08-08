@@ -160,7 +160,6 @@
     width: 70%;
     border-radius: 0.5rem;
     margin-top: 1.5rem;
-
 }
 
 .heroButton:hover {
@@ -178,63 +177,211 @@
     height: 100%;
 }
 
-#bmi {
-    width: 100%;
-    height: fit-content;
-}
-
-#bmiSectionContainer {
-    margin: 0 auto;
-    padding-bottom: 1.5rem;
-    box-sizing: border-box;
-    width: 100%;
-    height: fit-content;
+#bmiWelcome {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 1rem;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    border-radius: 0.4rem 3.3rem 3.3rem 0.4rem;
+    background-color: #6194db;
+    background-color: #0650d0;
+    color: #fff;
 }
 
-.leftContainer {
-    width: 100%;
-    height: 60vh;
-    border-radius: 0 0 1.5rem 0.8rem;
+#result {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(to bottom right, #fff, #cde4f4);
-}
-
-.bmiInfo {
-    width: 90%;
-    height: fit-content;
+    gap: 1rem;
+    width: 95%;
+    height: auto;
     margin: 0 auto;
-    padding: 0.7rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.4rem 3.3rem 3.3rem 0.4rem;
+    background-color: 	#00b359;
+    color: #fff;
 }
 
-.bmiInfo h2 {
-    font-size: 2.5rem;
+#bmiResult {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+}
+
+.formRadioButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    padding-bottom: 1.2rem;
 }
 
-.rightContainer {
-    width: 100%;
-    height: 30vh;
+.formRadioButton div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.formRadioButton input[type="radio"] {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* metric field settings */
+#metricFields {
     display: none;
+    gap: 2rem;
 }
 
-.bmiFormContainer {
-    width: 90%;
-    height: fit-content;
+#metricFields div {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 0.8rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 2rem 1rem rgba(81, 78, 250, 0.233), 0 0 0 0 rgba(81, 140, 248, 0.185);
+    gap: 0.5rem;
+    font-size: 0.8rem;
 }
+
+#metricFields input[type="number"] {
+    width: 35vw;
+    height: 2.5rem;
+    border: 0.02rem solid #bfbfbf;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    font-size: large;
+}
+
+/* standard fields settings */
+
+#standardFields {
+    display: flex;
+    gap: 2rem;
+}
+
+#standardFields div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.stdHeight {
+    display: flex;
+    flex-direction: row !important;
+}
+
+#standardFields input[id="feet"], #standardFields input[id="inches"] {
+    width: 20vw;
+    height: 2.5rem;
+    border: 0.02rem solid #bfbfbf;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    font-size: large;
+}
+
+#standardFields input[id="weight"] {
+    width: 30vw;
+    height: 2.5rem;
+    border: 0.02rem solid #bfbfbf;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    font-size: large;
+}
+
+
+.bmiButton {
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+    background-color: #0080FF;
+    width: 95%;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+.bmiButton:hover {
+    background-color: #010C80;
+    color: #fff;
+}
+
+/* mobile specific styling */
+@media (max-width:767px) {
+    #bmi {
+        width: 100%;
+        height: fit-content;
+    }
+    
+    #bmiSectionContainer {
+        margin: 0 auto;
+        padding-bottom: 1.5rem;
+        box-sizing: border-box;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+    }
+    
+    .leftContainer {
+        padding-top: 1rem;
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 60%;
+        border-radius: 0 0 1.5rem 0.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-image: linear-gradient(to bottom right, #fff, #cde4f4);
+    }
+    
+    .bmiInfo {
+        width: 90%;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 0.7rem;
+        text-align: center;
+    }
+    
+    .bmiInfo h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        padding-bottom: 1.2rem;
+    }
+    
+    .rightContainer {
+        width: 100%;
+        height: 40vh;
+        display: block;
+        background-color: #fff;
+    }
+
+    .bmiFormContainer {
+        position: absolute;
+        top: 47%;
+        z-index: 1;
+        width: 90%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0.8rem;
+        padding-bottom: 2rem;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        box-shadow: 0 0.5rem 2rem 1rem rgba(81, 78, 250, 0.233), 0 0 0 0 rgba(81, 140, 248, 0.185);
+    }
+}
+
+
+
 /* End of mobile first styling */
 
 
@@ -388,15 +535,146 @@
     .bmiFormContainer {
         position: absolute;
         z-index: 1;
-        right: 10rem;
+        right: 10%;
         width: 35%;
-        height: 60%;
+        height: fit-content;
         background-color: #fff;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
         padding: 0.8rem;
         border-radius: 0.5rem;
         box-shadow: 0 0.5rem 2rem 1rem rgba(81, 78, 250, 0.233), 0 0 0 0 rgba(81, 140, 248, 0.185);
     }
+
+    #result {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* gap: 1rem; */
+        width: 95%;
+        height: auto;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        border-radius: 0.4rem 3.3rem 3.3rem 0.4rem;
+        background-color: 	#00b359;
+        color: #fff;
+    }
+    
+    #bmiResult {
+        font-size: 1.7rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+    }
+    
+    .formRadioButton {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
+    .formRadioButton div {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .formRadioButton input[type="radio"] {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    /* metric field settings */
+    #metricFields {
+        display: none;
+        gap: 2rem;
+    }
+    
+    #metricFields div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    #metricFields input[type="number"] {
+        width: 80%;
+        height: 2.5rem;
+        border: 0.02rem solid #bfbfbf;
+        border-radius: 0.3rem;
+    }
+    
+    /* standard fields settings */
+    
+    #standardFields {
+        display: flex;
+        gap: auto;
+    }
+    
+    #standardFields div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .stdHeight {
+        display: flex;
+        flex-direction: row !important;
+        width: 56%;
+    }
+
+    .stdHeightFeet, .stdHeightInches {
+        width: 50%;
+    }
+
+    .stdWeight {
+        width: 40%;
+    }
+    
+    #standardFields input[id="feet"] {
+        width: 100%;
+        height: 2.5rem;
+        border: 0.02rem solid #bfbfbf;
+        border-radius: 0.3rem;
+    }
+
+    #standardFields input[id="inches"] {
+        width: 100%;
+        height: 2.5rem;
+        border: 0.02rem solid #bfbfbf;
+        border-radius: 0.3rem;
+    }
+    
+    #standardFields input[id="weight"] {
+        width: 100%;
+        height: 2.5rem;
+        border: 0.02rem solid #bfbfbf;
+        border-radius: 0.3rem;
+    }
+    
+    
+    .bmiButton {
+        margin: 0 auto;
+        padding: 1rem 0.5rem;
+        background-color: #0080FF;
+        width: 95%;
+        border: none;
+        border-radius: 0.5rem;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+    }
+    
+    .bmiButton:hover {
+        background-color: #010C80;
+        color: #fff;
+    }
+    
 }

@@ -1,57 +1,63 @@
 "use strict";
 // initialize the bugfender sdk
-Bugfender.init({
-    appKey: 'zYAkTJ7dVug4Zx4zvoS6sQuKC7oQv6Co',
-    apiURL: 'https://api.bugfender.com',
-    baseURL: 'https://dashboard.bugfender.com',
-    overrideConsoleMethods: true,
-    printToConsole: true,
-    registerErrorHandler: true,
-    logBrowserEvents: true,
-    logUIEvents: true,
-    version: 1.0,
-    build: 1,
-});
+// Bugfender.init({
+//     appKey: 'zYAkTJ7dVug4Zx4zvoS6sQuKC7oQv6Co',
+//     apiURL: 'https://api.bugfender.com',
+//     baseURL: 'https://dashboard.bugfender.com',
+//     overrideConsoleMethods: true,
+//     printToConsole: true,
+//     registerErrorHandler: true,
+//     logBrowserEvents: true,
+//     logUIEvents: true,
+//     version: 1.0,
+//     build: 1,
+// });
 
 // mobile menu event handler
 
 function displayOverlay() {
-    document.getElementById('mobileMenu').style.display = 'none';
+    document.getElementById("mobileMenu").style.display = 'none';
     document.getElementById("overlay").style.display = "block";
 }
 
 // close the overlay
 function closeOverlay() {
-    document.getElementById('mobileMenu').style.display = 'block';
+    document.getElementById("mobileMenu").style.display = 'block';
     document.getElementById("overlay").style.display = "none";
 }
 
 function showUnitFields(unit) { // select unit field based on selected type
     if (unit === "standard") {
-        document.getElementById("standardFields").style.display = "block";
+        document.getElementById("standardFields").style.display = "flex";
         document.getElementById("metricFields").style.display = "none";
     } else if (unit === "metric") {
-        document.getElementById("metricFields").style.display = "block";
+        document.getElementById("metricFields").style.display = "flex";
         document.getElementById("standardFields").style.display = "none";
-    }
-    Bugfender.log(showUnitFields());
-    Bugfender.warn(showUnitFields());
-    Bugfender.error(showUnitFields());
-    Bugfender.fatal(showUnitFields());
+    } 
+
+    // Bugfender.log(showUnitFields());
+    // Bugfender.warn(showUnitFields());
+    // Bugfender.error(showUnitFields());
+    // Bugfender.fatal(showUnitFields());
 }
 
 // calculate the bmi upon click event
 function calculateBMI() {
     const unit = document.querySelector('input[name="unit"]:checked').value;
-    const weight = parseFloat(unit === 'standard' ? document.getElementById('weight').value : document.getElementById('kilograms').value);
+    const weight = parseFloat(unit === "standard" ? document.getElementById('weight').value : document.getElementById("kilograms").value);
 
     let height = 0;
-    if (unit ==='standard') {
-            const feet = parseFloat(document.getElementById('feet').value);
-            const inches = parseFloat(document.getElementById('inches').value);
+    if (unit === "standard") {
+            const feet = parseFloat(document.getElementById("feet").value);
+            const inches = parseFloat(document.getElementById("inches").value);
             height = (feet * 12) +inches;
-        } else if (unit === 'metric'){
-            height = parseFloat(document.getElementById('centimeters').value);
+        } else if (unit === "metric"){
+            height = parseFloat(document.getElementById("centimeters").value);
+        } else {
+            // Bugfender.log(showUnitFields());
+            // Bugfender.warn(showUnitFields());
+            // Bugfender.error(showUnitFields());
+            // Bugfender.fatal(showUnitFields());
         }
 
         if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
@@ -82,13 +88,14 @@ function calculateBMI() {
             healthTips = 'You are Obese. Consider consulting a  healthcare professional.';
         }
 
-        document.getElementById('bmiResult').innerText = bmi;
-        document.getElementById('healthTips').textContent = healthTips;
-        document.getElementById('result').style.display = 'block';
+        document.getElementById("bmiResult").innerText = bmi;
+        document.getElementById("healthTips").textContent = healthTips;
+        document.getElementById("result").style.display = 'flex';
+        document.getElementById("bmiWelcome").style.display = 'none';
 
-        Bugfender.log(calculateBMI());
-        Bugfender.warn(calculateBMI());
-        Bugfender.error(calculateBMI());
-        Bugfender.fatal(calculateBMI());
-        Bugfender.info(calculateBMI())
+        // Bugfender.log(calculateBMI());
+        // Bugfender.warn(calculateBMI());
+        // Bugfender.error(calculateBMI());
+        // Bugfender.fatal(calculateBMI());
+        // Bugfender.info(calculateBMI())
 }

@@ -70,35 +70,50 @@
                 <div class="rightContainer"></div>
                 <div class="bmiFormContainer">
                     <h2>Enter your details below</h2>
-                    <div>
-                        <input type="radio" name="unit" id="standard" value="standard" onclick="showUnitFields('standard')" checked>
-                        <label for="standard">Standard</label>
-                    
-                        <input type="radio" name="unit" id="metric" value="metric" onclick="showUnitFields('metric')">
-                        <label for="metric">Metric</label>
+                    <div class="formRadioButton">
+                        <div>
+                            <input type="radio" name="unit" id="standard" value="standard" onclick="showUnitFields(value)" checked>
+                            <label for="standard">Standard</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="unit" id="metric" value="metric" onclick="showUnitFields(value)">
+                            <label for="metric">Metric</label>
+                        </div>
                     </div>
                     
                       <!-- Standard Unit Fields -->
-                    <div id="standardFields">
-                        <label for="feet">Height (feet):</label>
-                        <input type="number" id="feet" min="1" required>
-                        <label for="inches">Height (inches):</label>
-                        <input type="number" id="inches" min="0" max="11" required>
-                        <label for="weight">Weight (lbs):</label>
-                        <input type="number" id="weight" min="1" required>
+                    <div class="standardFields" id="standardFields">
+                        <div class="stdHeight">
+                            <div class="stdHeightFeet">
+                                <label for="feet">Height (ft):</label>
+                                <input type="number" id="feet" min="1" required>
+                            </div>
+                            <div class="stdHeightInches">
+                                <label for="inches">(in):</label>
+                                <input type="number" id="inches" min="0" max="11" required>
+                            </div>
+                        </div>
+                        <div class="stdWeight">
+                            <label for="weight">Weight (lbs):</label>
+                            <input type="number" id="weight" min="1" required>
+                        </div>
                     </div>
                     
                       <!-- Metric Unit Fields -->
-                    <div id="metricFields" style="display:none;">
-                        <label for="centimeters">Height (cm):</label>
-                        <input type="number" id="centimeters" min="1" required>
-                        <label for="kilograms">Weight (kg):</label>
-                        <input type="number" id="kilograms" min="1" required>
+                    <div class="metricFields" id="metricFields" >
+                        <div>
+                            <label for="centimeters">Height (cm):</label>
+                            <input type="number" id="centimeters" min="1" required>
+                        </div>
+                        <div>
+                            <label for="kilograms">Weight (kg):</label>
+                            <input type="number" id="kilograms" min="1" required>
+                        </div>
                     </div>
                     
-                    <button onclick="calculateBMI()">Calculate BMI</button>
+                    <button class="bmiButton" onclick="calculateBMI()">Calculate BMI</button>
 
-                    <div class="bmiWelcome">
+                    <div id="bmiWelcome">
                         <h2>Welcome!</h2>
                         <p>
                             Enter your height and width and press the button to see the results
@@ -106,9 +121,14 @@
                     </div>
                     
                     <div id="result" style="display:none;">
-                        <h2>Result:</h2>
-                        <p>Your BMI: <span id="bmiResult"></span></p>
-                        <p>Suggested Health Tips: <span id="healthTips"></span></p>
+                        <div>
+                            <h2>Result:</h2>
+                            <p>Your BMI is...</p> 
+                            <p><span id="bmiResult"></span></p>
+                        </div>
+                        <div>
+                            <p><span id="healthTips"></span></p>
+                        </div>
                     </div>
                 </div>
             </div>
