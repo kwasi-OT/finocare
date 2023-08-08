@@ -1,17 +1,17 @@
 "use strict";
 // initialize the bugfender sdk
-// Bugfender.init({
-//     appKey: 'zYAkTJ7dVug4Zx4zvoS6sQuKC7oQv6Co',
-//     apiURL: 'https://api.bugfender.com',
-//     baseURL: 'https://dashboard.bugfender.com',
-//     overrideConsoleMethods: true,
-//     printToConsole: true,
-//     registerErrorHandler: true,
-//     logBrowserEvents: true,
-//     logUIEvents: true,
-//     version: 1.0,
-//     build: 1,
-// });
+Bugfender.init({
+    appKey: 'zYAkTJ7dVug4Zx4zvoS6sQuKC7oQv6Co',
+    apiURL: 'https://api.bugfender.com',
+    baseURL: 'https://dashboard.bugfender.com',
+    overrideConsoleMethods: true,
+    printToConsole: true,
+    registerErrorHandler: true,
+    logBrowserEvents: true,
+    logUIEvents: true,
+    version: 1.0,
+    build: 1,
+});
 
 // mobile menu event handler
 
@@ -35,10 +35,6 @@ function showUnitFields(unit) { // select unit field based on selected type
         document.getElementById("standardFields").style.display = "none";
     } 
 
-    // Bugfender.log(showUnitFields());
-    // Bugfender.warn(showUnitFields());
-    // Bugfender.error(showUnitFields());
-    // Bugfender.fatal(showUnitFields());
 }
 
 // calculate the bmi upon click event
@@ -53,12 +49,8 @@ function calculateBMI() {
             height = (feet * 12) +inches;
         } else if (unit === "metric"){
             height = parseFloat(document.getElementById("centimeters").value);
-        } else {
-            // Bugfender.log(showUnitFields());
-            // Bugfender.warn(showUnitFields());
-            // Bugfender.error(showUnitFields());
-            // Bugfender.fatal(showUnitFields());
         }
+            
 
         if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
             alert("Please enter a valid weight and height.");
@@ -92,10 +84,9 @@ function calculateBMI() {
         document.getElementById("healthTips").textContent = healthTips;
         document.getElementById("result").style.display = 'flex';
         document.getElementById("bmiWelcome").style.display = 'none';
+        
+}
 
-        // Bugfender.log(calculateBMI());
-        // Bugfender.warn(calculateBMI());
-        // Bugfender.error(calculateBMI());
-        // Bugfender.fatal(calculateBMI());
-        // Bugfender.info(calculateBMI())
+function openBMIPage() {
+    window.open("./bmi.html","_self");
 }

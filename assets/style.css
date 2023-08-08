@@ -309,6 +309,27 @@
     color: #fff;
 }
 
+.openBMIPage {
+    margin: 0 auto;
+    padding: 0.7rem 0.5rem;
+    margin-top: 0.8rem;
+    /* background-color: #e6e600; */
+    background: none;
+    width: 95%;
+    border: 0.031rem solid #e6e600;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    cursor: pointer;
+}
+
+.openBMIPage:hover {
+    background-color: #33cc33;
+    color: #fff;
+}
+
 /* mobile specific styling */
 @media (max-width:767px) {
     #bmi {
