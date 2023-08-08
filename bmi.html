@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>finoCare: Your Health Your Life</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
 <body>
-    
+    <header id="header">
+        <div class="headerTop">
+            <div class="headerLogo">
+                <a href="index.html"><img src="./assets/images/logo.png" alt="logo"></a>
+            </div>
+            <nav class="headerMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bmi.html">BMI</a></li>
+                    <li><a href="exercise.html">Exercises</a></li>
+                </ul>
+            </nav>
+            <div id="mobileMenu" onclick="displayOverlay()">
+                <i class="mobileMenuIcon" data-feather="menu"></i>
+            </div>
+            <div id="overlay">
+                <nav class="overlayNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="bmi.html">BMI</a></li>
+                        <li><a href="exercise.html">Exercises</a></li>
+                    </ul>
+                    <div class="overlayClose" onclick="closeOverlay()">
+                        <i class="closeIcon" data-feather="x-square"></i>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
 </body>
 </html>
+
+    
+            
