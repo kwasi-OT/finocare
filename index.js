@@ -87,6 +87,9 @@ function calculateBMI() {
         
 }
 
+
 function openBMIPage() {
-    window.open("./bmi.html","_self");
+    const bmiOutcome = calculateBMI();
+    localStorage.setItem("bmiOutcome", bmiOutcome);
+    window.location.href = "bmi.html";
 }
