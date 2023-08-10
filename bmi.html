@@ -50,14 +50,35 @@
         <section id="personal">
             <div id="persContainer">
                 <div id="persLeft">
-                    <p>Your BMI is...</p> 
-                    <p><span id="bmiOutcome"></span></p>
+                    <div id="showBMI">
+                        <p>Your BMI is...</p> 
+                        <p><span id="bmiValue"></span></p>
+                        <button id="resetButton" onclick="resetBmiValue()">Reset BMI</button>
+                    </div>
+                    <div id="checkBMI">
+                        <p>
+                            You do not have your BMI checked yet. Click the button below to to get your free BMI status.
+                        </p>
+                        <button id="bmiForm" type="button">Get Your Free BMI</button>
+                    </div>
                 </div>
-                <div class="persRight"></div>
+                <div class="persRight">
+                    <h2>What your BMI result means</h2>
+                    <p>
+                        A BMI range of 18.5 to 24.9 is considered a healthy weight. However, a range of 25.0 to 29.9 is considered overweight, whereas 30.0 and above is considered to be obesity and below 18.5 is underweight.
+                        Maintaining a healthy weight may lower your chances of experiencing health issues later on, such as obesity and type 2 diabetes.
+                        Aim for a nutrutious diet with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for regular physical activity, ideally about 30 minutes daily for five days a week.
+                    </p>
+                </div>
             </div>
         </section>
     </main>
     <footer></footer>
+    <script defer src="https://js.bugfender.com/bugfender-v2.js"></script>
+    <script src="/index.js"></script>
+    <script>
+        feather.replace()
+    </script>
 </body>
 </html>
 

@@ -1,17 +1,19 @@
 "use strict";
 // initialize the bugfender sdk
-Bugfender.init({
-    appKey: 'zYAkTJ7dVug4Zx4zvoS6sQuKC7oQv6Co',
-    apiURL: 'https://api.bugfender.com',
-    baseURL: 'https://dashboard.bugfender.com',
-    overrideConsoleMethods: true,
-    printToConsole: true,
-    registerErrorHandler: true,
-    logBrowserEvents: true,
-    logUIEvents: true,
-    version: 1.0,
-    build: 1,
-});
+// import { Bugfender } from '@bugfender/sdk';
+
+// Bugfender.init({
+//     appKey: 'zYAkTJ7dVug4Zx4zvoS6sQuKC7oQv6Co',
+//     apiURL: 'https://api.bugfender.com',
+//     baseURL: 'https://dashboard.bugfender.com',
+//     overrideConsoleMethods: true,
+//     printToConsole: true,
+//     registerErrorHandler: true,
+//     logBrowserEvents: true,
+//     logUIEvents: true,
+//     version: 1.0,
+//     build: 1,
+// });
 
 // mobile menu event handler
 
@@ -20,11 +22,13 @@ function displayOverlay() {
     document.getElementById("overlay").style.display = "block";
 }
 
+
 // close the overlay
 function closeOverlay() {
     document.getElementById("mobileMenu").style.display = 'block';
     document.getElementById("overlay").style.display = "none";
 }
+
 
 function showUnitFields(unit) { // select unit field based on selected type
     if (unit === "standard") {
@@ -34,8 +38,8 @@ function showUnitFields(unit) { // select unit field based on selected type
         document.getElementById("metricFields").style.display = "flex";
         document.getElementById("standardFields").style.display = "none";
     } 
-
 }
+
 
 // calculate the bmi upon click event
 function calculateBMI() {
@@ -57,7 +61,6 @@ function calculateBMI() {
             return;
         }
         
-        // const bmi = (weight / (height * height)).toFixed(1);
         let calculations;
         if (unit === "standard") {
             // Calculate BMI using standard units (inches and pounds)
@@ -68,7 +71,10 @@ function calculateBMI() {
         }
         const bmi = calculations.toFixed(1);
 
+        // save the calculated bmi in local storage for later use
+        localStorage.setItem("bmiOutcome", bmi);
 
+        // display health tips as per results
         let healthTips = '';
         if (bmi < 18.5) {
             healthTips = 'You are Underweight. Try to gain some weight.';
@@ -84,12 +90,31 @@ function calculateBMI() {
         document.getElementById("healthTips").textContent = healthTips;
         document.getElementById("result").style.display = 'flex';
         document.getElementById("bmiWelcome").style.display = 'none';
-        
 }
 
 
-function openBMIPage() {
-    const bmiOutcome = calculateBMI();
-    localStorage.setItem("bmiOutcome", bmiOutcome);
+// const bmiPage = document.getElementById("openBMIPage");
+// bmiPage.addEventListener("click", openPage());
+
+function openPage() {
     window.location.href = "bmi.html";
 }
+
+const receiveBMI = localStorage.getItem("bmiOutcome");
+    
+if (receiveBMI === 0 || !receiveBMI) {
+    document.getElementById("showBMI").style.display = "none";
+    document.getElementById("checkBMI").style.display = "flex";
+} else {
+    document.getElementById("showBMI").style.display = "flex";
+    document.getElementById("checkBMI").style.display = "none"; 
+    document.getElementById("bmiValue").innerText = receiveBMI;       
+}
+
+function resetBmiValue() {
+    const resetValue = 0;
+    localStorage.setItem("bmiOutcome", resetValue);
+}
+
+
+
