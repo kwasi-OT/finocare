@@ -120,7 +120,6 @@ function resetBmiValue() {
 }
 
 // footer year settings
-
 const dateNow = new Date();
 const year = dateNow.getFullYear();
 document.querySelector(".year").textContent = year;
