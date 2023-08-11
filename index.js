@@ -98,23 +98,32 @@ function calculateBMI() {
 
 function openPage() {
     window.location.href = "bmi.html";
-}
 
-const receiveBMI = localStorage.getItem("bmiOutcome");
+    const receiveBMI = localStorage.getItem("bmiOutcome");
     
-if (receiveBMI === 0 || !receiveBMI) {
-    document.getElementById("showBMI").style.display = "none";
-    document.getElementById("checkBMI").style.display = "flex";
-} else {
-    document.getElementById("showBMI").style.display = "flex";
-    document.getElementById("checkBMI").style.display = "none"; 
-    document.getElementById("bmiValue").innerText = receiveBMI;       
+    if (receiveBMI === 0 || !receiveBMI) {
+        document.getElementById("showBMI").style.display = "none";
+        document.getElementById("checkBMI").style.display = "flex";
+    } else {
+        document.getElementById("showBMI").style.display = "flex";
+        document.getElementById("checkBMI").style.display = "none"; 
+        document.getElementById("bmiValue").innerText = receiveBMI;       
+    }
 }
 
+
+
+// function to reset the value of the local storage
 function resetBmiValue() {
     const resetValue = 0;
     localStorage.setItem("bmiOutcome", resetValue);
 }
+
+// footer year settings
+
+const dateNow = new Date();
+const year = dateNow.getFullYear();
+document.querySelector(".year").textContent = year;
 
 
 

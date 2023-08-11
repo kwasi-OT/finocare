@@ -313,7 +313,6 @@
     margin: 0 auto;
     padding: 0.7rem 0.5rem;
     margin-top: 0.8rem;
-    /* background-color: #e6e600; */
     background: none;
     width: 95%;
     border: 0.031rem solid #e6e600;
@@ -328,6 +327,18 @@
 .openBMIPage:hover {
     background-color: #33cc33;
     color: #fff;
+}
+
+.footer {
+    width: 100%;
+    height: fit-content;
+    padding: 3rem 0 2rem 0;
+}
+
+.copyright {
+    width: fit-content;
+    padding-top: 1.7rem;
+    margin: 0 auto;
 }
 
 /* mobile specific styling */
@@ -697,5 +708,4 @@
         background-color: #010C80;
         color: #fff;
     }
-    
 }
