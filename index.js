@@ -98,18 +98,23 @@ function calculateBMI() {
 
 function openPage() {
     window.location.href = "bmi.html";
-
-    const receiveBMI = localStorage.getItem("bmiOutcome");
-    
-    if (receiveBMI === 0 || !receiveBMI) {
-        document.getElementById("showBMI").style.display = "none";
-        document.getElementById("checkBMI").style.display = "flex";
-    } else {
-        document.getElementById("showBMI").style.display = "flex";
-        document.getElementById("checkBMI").style.display = "none"; 
-        document.getElementById("bmiValue").innerText = receiveBMI;       
-    }
 }
+
+// function to update page
+(function updatePage() {
+    const receiveBMI = localStorage.getItem("bmiOutcome");
+    const receiveBMIInt = parseInt(receiveBMI);
+
+    if (receiveBMIInt === 0) {
+        document.querySelector("#showBMI").style.display = "none";
+        document.querySelector("#checkBMI").style.display = "flex";
+    } else {
+        document.querySelector("#showBMI").style.display = "flex";
+        document.querySelector("#checkBMI").style.display = "none";  
+        document.getElementById("bmiValue").textContent = receiveBMI;      
+    }
+    // setInterval(updatePage(), 1000);
+})();
 
 
 

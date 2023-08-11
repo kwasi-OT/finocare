@@ -4,3 +4,132 @@
     margin: 0;
     font-family: 'Fira Sans Condensed', sans-serif;
 }
+
+#personal {
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+}
+
+#persContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1.5rem;
+    width: 95%;
+    height: fit-content;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+.persLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: fit-content;
+    /* background-image: linear-gradient(to bottom right, #fff, #cde4f4); */
+    background-color: #e6f0ff;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+#showBMI {
+    display: none;
+}
+
+#checkBMI {
+    display: none;
+}
+
+.persRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.persRight h2 {
+    font-size: 2rem;
+}
+
+#persAdvice {
+    width: 100%;
+    height: fit-content;
+}
+
+.adviceContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    width: 95%;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 2rem 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(to bottom right, #fff 15%, #e6ffff);
+}
+
+.advice {
+    width: 95%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.3rem;
+}
+
+.adviceIcon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-solid {
+    font-size: 1.8rem;
+}
+
+.bowl {
+    padding: 2rem;
+    background-color: #ffcce0;
+}
+
+.fa-bowl-rice {
+    color: #ff0066;
+}
+
+.person {
+    padding: 2rem;
+    background-color: #ffe6cc;
+}
+
+.fa-person-walking {
+    color: #ff901a;
+}
+
+.bed {
+    padding: 2rem;
+    background-color: #b3ffd9;
+}
+
+.fa-bed {
+    color: #00e673;
+}
+
+.adviceContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
