@@ -15,12 +15,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     padding-top: 1.5rem;
     width: 95%;
     height: fit-content;
     margin: 0 auto;
-    height: fit-content;
 }
 
 .persLeft {
@@ -29,19 +28,58 @@
     justify-content: center;
     align-items: center;
     width: 95%;
-    height: fit-content;
-    /* background-image: linear-gradient(to bottom right, #fff, #cde4f4); */
+    height: 40vh;
     background-color: #e6f0ff;
     border-radius: 0.5rem;
     padding: 0.5rem;
 }
 
 #showBMI {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 60%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #f79256;
+}
+
+.showBMIText {
+    font-size: larger;
+    padding: 0.5rem 1rem;
+}
+
+#bmiValue {
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 1rem;
 }
 
 #checkBMI {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 60%;
+}
+
+#bmiForm, #resetButton {
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+    background-color: #0080FF;
+    width: 95%;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+#bmiForm:hover, #resetButton {
+    background-color: #010C80;
+    color: #fff;
 }
 
 .persRight {
