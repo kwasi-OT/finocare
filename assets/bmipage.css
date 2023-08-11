@@ -171,3 +171,249 @@
     flex-direction: column;
     gap: 1.5rem;
 }
+
+.limContainer {
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.limTop {
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.limTopLeft {
+    text-align: center;
+    line-height: 1.3rem;
+    padding: 0.5rem;
+}
+
+.limTopLeft h2{
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.limTopRight {
+    width: 97%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 auto;
+}
+
+.lim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 15rem;
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 2rem 1rem rgba(81, 78, 250, 0.233), 0 0 0 0 rgba(81, 140, 248, 0.185);
+}
+
+.limIcon {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.limIcon h2 {
+    font-size: 2rem;
+}
+
+.limDown {
+    margin: 0 auto;
+    width: 93%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* End of mobile section */
+
+
+
+/* Start of tablet and desktop section */
+
+@media (min-width: 768px) {
+    #persContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* gap: 3rem; */
+        padding-top: 1.5rem;
+        width: 90%;
+        height: fit-content;
+        margin: 1rem auto;
+    }
+    
+    .persLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 60vh;
+        background-color: #e6f0ff;
+        border-radius: 1.5rem;
+        padding: 0.5rem;
+        margin-left: 4rem;
+    }
+    
+    #showBMI {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        width: 60%;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        background-color: #f79256;
+    }
+    
+    .showBMIText {
+        font-size: larger;
+        padding: 0.5rem 1rem;
+    }
+    
+    #bmiValue {
+        font-size: 2rem;
+        font-weight: 900;
+        padding: 1rem;
+    }
+    
+    #checkBMI {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        width: 60%;
+        line-height: 1.3rem;
+    }
+    
+    #bmiForm, #resetButton {
+        margin: 0 auto;
+        padding: 1rem 0.5rem;
+        background-color: #0080FF;
+        width: 95%;
+        border: none;
+        border-radius: 0.5rem;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+        cursor: pointer;
+    }
+    
+    #bmiForm:hover, #resetButton {
+        background-color: #010C80;
+        color: #fff;
+    }
+    
+    .persRight {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        width: 40%;
+        height: 40vh;
+        margin: 0 auto;
+        padding: 1rem;
+        line-height: 1.3rem;
+    }
+    
+    .persRight h2 {
+        font-size: 2rem;
+    }
+
+    /* advice section */
+    .adviceContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 97%;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 5rem 2rem 5rem 3rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        border-radius: 2rem;
+        background-image: linear-gradient(to bottom right, #fff 15%, #e6ffff);
+    }
+    
+    .advice {
+        width: 30%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.3rem;
+        padding: 1rem;
+    }
+    
+    .adviceIcon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .fa-solid {
+        font-size: 1.8rem;
+    }
+    
+    .bowl {
+        padding: 2rem;
+        background-color: #ffcce0;
+    }
+    
+    .fa-bowl-rice {
+        color: #ff0066;
+    }
+    
+    .person {
+        padding: 2rem;
+        background-color: #ffe6cc;
+    }
+    
+    .fa-person-walking {
+        color: #ff901a;
+    }
+    
+    .bed {
+        padding: 2rem;
+        background-color: #b3ffd9;
+    }
+    
+    .fa-bed {
+        color: #00e673;
+    }
+    
+    .adviceContent {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
