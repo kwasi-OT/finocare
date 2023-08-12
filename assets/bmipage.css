@@ -221,6 +221,7 @@
     justify-content: center;
     width: 100%;
     height: 15rem;
+    height: fit-content;
     padding: 2rem;
     gap: 2rem;
     border-radius: 2rem;
@@ -247,18 +248,103 @@
     gap: 1.5rem;
 }
 
+.fa-venus-mars {
+    color: #ff4000;
+}
+
+.fa-children {
+    color: #00ffcc;
+}
+
+.fa-dumbbell {
+    color: #9900cc;
+}
+
+.fa-person-pregnant {
+    color: #ff751a;
+}
+
+.fa-people-arrows {
+    color: #ff3399;
+}
+
 /* End of mobile section */
 
 
 
-/* Start of tablet and desktop section */
+/* Start of tablet settings*/
+
+@media (min-width: 600px) and (max-width: 767px) {
+    .adviceContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3.3rem;
+        width: 95%;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 2rem 0.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 2rem;
+        background-image: linear-gradient(to bottom right, #fff 15%, #e6ffff);
+    }
+
+    .advice {
+        width: 95%;
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .limTopRight {
+        width: 97%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 0 auto;
+    }
+
+    .limDown {
+        margin: 0 auto;
+        width: 93%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .lim {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 48%;
+        height: 15rem;
+        /* height: fit-content; */
+        padding: 2rem;
+        gap: 2rem;
+        border-radius: 2rem;
+        box-shadow: 0 0.5rem 2rem 1rem rgba(81, 78, 250, 0.233), 0 0 0 0 rgba(81, 140, 248, 0.185);
+    }
+}
+
+
+/* desktop section */
 
 @media (min-width: 768px) {
     #persContainer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        /* gap: 3rem; */
         padding-top: 1.5rem;
         width: 90%;
         height: fit-content;
