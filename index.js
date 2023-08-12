@@ -100,7 +100,7 @@ function openPage() {
     window.location.href = "bmi.html";
 }
 
-// function to update page
+// function to update page depending on state of local storage
 (function updatePage() {
     const receiveBMI = localStorage.getItem("bmiOutcome");
     const receiveBMIInt = parseInt(receiveBMI);
@@ -113,18 +113,18 @@ function openPage() {
         document.querySelector("#checkBMI").style.display = "none";  
         document.getElementById("bmiValue").textContent = receiveBMI;      
     }
-    // setInterval(updatePage(), 1000);
 })();
 
 
 
-// function to reset the value of the local storage
+// function to reset the BMI value, clear the local storage and reload the page
 function resetBmiValue() {
     const resetValue = 0;
     localStorage.setItem("bmiOutcome", resetValue);
+    window.location.reload();
 }
 
-// footer year settings
+// footer 'year' settings
 const dateNow = new Date();
 const year = dateNow.getFullYear();
 document.querySelector(".year").textContent = year;
