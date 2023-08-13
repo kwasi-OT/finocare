@@ -15,18 +15,34 @@
 //     build: 1,
 // });
 
-// mobile menu event handler
 
+// mobile menu event handler
 function displayOverlay() {
     document.getElementById("mobileMenu").style.display = 'none';
     document.getElementById("overlay").style.display = "block";
 }
 
+// display overlay and bmi form
+const bmiForm = document.querySelector("#bmiForm");
+bmiForm.addEventListener("click", displayPageOverlay);
 
-// close the overlay
+function displayPageOverlay() {
+    document.querySelector("#bmiPageOverlay").style.display = "flex";
+}
+
+
+// close the overlay on the homepage
 function closeOverlay() {
     document.getElementById("mobileMenu").style.display = 'block';
     document.getElementById("overlay").style.display = "none";
+}
+
+// close the overlay on the bmi page
+const bmiPageOverlayClose = document.querySelector(".bmiPageOverlayClose");
+bmiPageOverlayClose.addEventListener("click", closePageOverlay);
+
+function closePageOverlay() {
+    document.getElementById("bmiPageOverlay").style.display = "none";
 }
 
 
