@@ -109,6 +109,7 @@ function calculateBMI() {
 }
 
 
+
 // const bmiPage = document.getElementById("openBMIPage");
 // bmiPage.addEventListener("click", openPage());
 
@@ -140,10 +141,12 @@ function resetBmiValue() {
     window.location.reload();
 }
 
+
 // footer 'year' settings
 const dateNow = new Date();
 const year = dateNow.getFullYear();
 document.querySelector(".year").textContent = year;
+// document.querySelector(".indexYear").innerText = year;
 
 
 
