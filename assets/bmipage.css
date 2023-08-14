@@ -35,7 +35,7 @@
 }
 
 #showBMI {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;

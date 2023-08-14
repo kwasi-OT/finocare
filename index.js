@@ -1,4 +1,6 @@
 "use strict";
+
+
 // initialize the bugfender sdk
 // import { Bugfender } from '@bugfender/sdk';
 
@@ -23,11 +25,13 @@ function displayOverlay() {
 }
 
 // display overlay and bmi form
-const bmiForm = document.querySelector("#bmiForm");
-bmiForm.addEventListener("click", displayPageOverlay);
-
-function displayPageOverlay() {
-    document.querySelector("#bmiPageOverlay").style.display = "flex";
+const bmiPageForm = document.querySelector("#bmiForm");
+console.log(bmiPageForm);
+if (bmiPageForm) {
+    bmiPageForm.addEventListener("click", displayPageOverlay);
+    function displayPageOverlay() {
+        document.querySelector("#bmiPageOverlay").style.display = "flex";
+    }
 }
 
 
@@ -109,9 +113,9 @@ function calculateBMI() {
 }
 
 
-
-// const bmiPage = document.getElementById("openBMIPage");
-// bmiPage.addEventListener("click", openPage());
+// function to open the bmi page
+const bmiPage = document.querySelector("#openBMIPage");
+bmiPage.addEventListener("click", openPage);
 
 function openPage() {
     window.location.href = "bmi.html";
