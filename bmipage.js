@@ -1,6 +1,6 @@
 // display overlay and bmi form
 const bmiPageForm = document.querySelector("#bmiForm");
-console.log(bmiPageForm);
+
 if (bmiPageForm) {
     bmiPageForm.addEventListener("click", displayPageOverlay);
     function displayPageOverlay() {
